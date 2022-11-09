@@ -64,6 +64,11 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
+app.get("/", (req,res)=>{
+    res.status(200).json({
+        mesagge:"You api is ready...."
+    })
+});
 app.listen("5000", () => {
     console.log("Backend is running.");
 });
